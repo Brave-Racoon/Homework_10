@@ -4,7 +4,7 @@ on: [push]
 
 permissions:
   contents: read
-
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,4 +24,19 @@ jobs:
       run: |
         cd ./app
         pytest -s --cov --cov-report html --cov-fail-under 70
-
+        
+    - name: Coveralls
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        parallel: true
+        
+  finish:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Coveralls Finished
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          parallel-finished: true
