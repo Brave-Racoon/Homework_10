@@ -1,0 +1,12 @@
+asgiref==3.8.1
+crispy-bootstrap4==2024.1
+Django==4.2
+django-crispy-forms==2.1
+mixer==7.2.2
+parts==1.7.0
+pillow==10.3.0
+products==1.2.0
+pytest==7.2.2
+pytest-django==4.8.0
+sqlparse==0.4.4
+tzdata==2024.1

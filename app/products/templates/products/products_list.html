@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}
+     <div class="pb-3 mr-5 mt-3 mb-3 border-bottom" style="width:50%;">
+            <h4>Products:</h4>
+    <!-- Some other text here. -->
+     </div>
+{% endblock %}
+{% block content %}
+<div class="m-sm-4">
+        {% if user.is_authenticated %}
+            <h5>Welcome, {{user.username}}!</h5>
+        {% else %}
+            <a href="/auth/login/">Log in</a>
+        {% endif %}
+        <p> </p>
+        <a href="{% url 'index' %}">Home</a>
+        <p> </p>
+        <ul>
+            {% for product in object_list %}
+                <li><a href="{% url 'product-detail' product.id %}">{{product.title}}</a></li>
+            {% empty %}
+                <li>No products yet.</li>
+            {% endfor %}
+        </ul>
+        <p> </p>
+        <a href="{% url 'index' %}">Home</a>
+</div>
+{% endblock %}}
