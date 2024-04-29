@@ -24,3 +24,7 @@ jobs:
       run: |
         cd ./app
         pytest -s --cov --cov-report html --cov-fail-under 70
+    - name: Coveralls GitHub Action
+      run: |
+        coverallsapp/github-action@v2.2.3
+            
