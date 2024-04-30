@@ -24,7 +24,7 @@ jobs:
       run: |
         cd ./app
         # pytest -s --cov --cov-report html --cov-fail-under 70     
-        coverage run -m pytest
+        python coverage run -m pytest
         cd ../coverage_badge
-        coverage-badge -f -o ../app/app.svg
+        python -m coverage-badge -f -o ../app/app.svg
 
