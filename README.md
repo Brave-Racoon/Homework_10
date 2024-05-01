@@ -1,4 +1,4 @@
-![Badge]([https://github.com/Brave-Racoon/Homework_10/blob/66c1961c472f7a941c21c1998d9425981e4c8d7e/app/app.svg])
+![Badge](https://github.com/Brave-Racoon/Homework_10/blob/66c1961c472f7a941c21c1998d9425981e4c8d7e/app/app.svg)
 ### Домашнее задание "GitHub Actions"
 #### Задача:
 - добавить GitHub Action с выполнением тестов (можно настроить на выполнение имеющихся тестов, например, тестов Django приложения)
